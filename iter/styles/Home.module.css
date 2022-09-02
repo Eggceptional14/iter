@@ -3,7 +3,8 @@
   height: 40px;
   border: 0;
   border-radius: 15px;
-  background-image: radial-gradient(at bottom, #000 50%, transparent 50%);
+  background-color: #FF9B26;
+  background-image: radial-gradient(at bottom, #56BEEC 50%, transparent 50%);
   background-repeat: no-repeat;
   transition: background-size .5s, color .5s;
   background-size: 0 0;
@@ -13,7 +14,7 @@
 
 .planner:hover {
   background-size: 200% 200%;
-  color: red;
+  /* color: #FF9B26; */
 }
 
 .container {
