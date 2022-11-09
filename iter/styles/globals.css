@@ -1,3 +1,13 @@
+:root{
+  --black: #292929;
+  --blue: #56BEEC;
+  --orange: #FF9B26;
+  --yellow: #FFC569;
+  --pale-yellow: #FFEDD0;
+  --ivory: #FFF4E3;
+  --light-ivory: #FFFAF2;
+}
+
 html,
 body {
   background: #FFFAF2;
