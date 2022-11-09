@@ -15,7 +15,7 @@
 }
 .container3 {
     width: 40%;
-    background-color: #56BEEC;
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,38 +28,38 @@
     height: 3em;
     border: 0;
     border-radius: 15px;
-    background-color: #FF9B26;
-    background-image: radial-gradient(at bottom, #56BEEC 50%, transparent 50%);
+    background-color: var(--orange);
+    background-image: radial-gradient(at bottom, var(--blue) 50%, transparent 50%);
     background-repeat: no-repeat;
     transition: background-size .5s, color .5s;
     background-size: 0 0;
     background-position: 50% 100%;
-    color: white;
+    color: var(--light-ivory);
 }
   
 .button-prim:hover {
 background-size: 200% 200%;
-background-color: #FF9B26;
+background-color: var(--orange);
 }
 
 .button-sec {
     width: 10em;
     height: 3em;
     background: none;
-    border: 2px solid white;
+    border: 2px solid var(--light-ivory);
     border-radius: 15px;
-    background-image: radial-gradient(at bottom, white 50%, transparent 50%);
+    background-image: radial-gradient(at bottom, var(--light-ivory) 50%, transparent 50%);
     background-repeat: no-repeat;
     transition: background-size .5s, color .5s;
     background-size: 0 0;
     background-position: 50% 100%;
-    color: white;
+    color: var(--light-ivory);
 }
 
 .button-sec:hover {
     background-size: 200% 200%;
-    color: #FF9B26;
-    /* border-color: #FF9B26; */
+    color: var(--orange);
+}
 
 .button-text {
     border: none;
