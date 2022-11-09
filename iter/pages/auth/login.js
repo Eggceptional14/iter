@@ -36,6 +36,7 @@ export default function LoginPage() {
             </div>
             <div className={styles['container1']}>
                 <span>Sign In to Your Account</span>
+                <hr size='6' width='150'/>
                 <TextField
                     id="outlined-basic" 
                     label="Email"
@@ -55,6 +56,11 @@ export default function LoginPage() {
                 <ButtonUnstyled type="button" varient="text" className={styles['button-text']}>
                     Forgot Your Password?
                 </ButtonUnstyled>
+                <div className={styles['container3']}>
+                    <hr size='5' width='150'/>
+                    <span>or login using</span>
+                    <hr size='5' width='150'/>
+                </div>
             </div>
         </div>
     )
