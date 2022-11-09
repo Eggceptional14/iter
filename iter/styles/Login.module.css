@@ -41,7 +41,6 @@
 background-size: 200% 200%;
 background-color: var(--orange);
 }
-
 .button-sec {
     width: 10em;
     height: 3em;
@@ -55,7 +54,6 @@ background-color: var(--orange);
     background-position: 50% 100%;
     color: var(--light-ivory);
 }
-
 .button-sec:hover {
     background-size: 200% 200%;
     color: var(--orange);
