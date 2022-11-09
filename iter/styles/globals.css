@@ -10,7 +10,7 @@
 
 html,
 body {
-  background: #FFFAF2;
+  background: var(--light-ivory);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
