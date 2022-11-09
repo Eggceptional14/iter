@@ -1,4 +1,5 @@
-import Button from '@mui/material/Button';
+import { TextField, Button } from '@mui/material';
+import { ButtonUnstyled } from '@mui/base';
 import styles from '../../styles/Login.module.css'
 
 
@@ -31,8 +32,27 @@ export default function LoginPage() {
                 <span>Join us</span>
                 <Button type="button" className={styles['button-sec']}>Sign Up</Button>
             </div>
-            <div>
-                2
+            <div className={styles.container2}>
+                <span>Sign In to Your Account</span>
+                <TextField
+                    id="outlined-basic" 
+                    label="Email"
+                    variant="outlined"
+                    className={styles['input-field']}
+                />
+                <TextField
+                    id="outlined-basic" 
+                    label="Password" 
+                    variant="outlined" 
+                    type="password"
+                    className={styles['input-field']}
+                />
+                <Button type="button" className={styles['button-prim']}>
+                    Sign In
+                </Button>
+                <ButtonUnstyled type="button" varient="text" className={styles['button-text']}>
+                    Forgot Your Password?
+                </ButtonUnstyled>
             </div>
         </div>
     )
