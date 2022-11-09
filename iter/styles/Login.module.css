@@ -60,6 +60,19 @@ background-color: #FF9B26;
     background-size: 200% 200%;
     color: #FF9B26;
     /* border-color: #FF9B26; */
+
+.button-text {
+    border: none;
+    background: none;
+}
+.button-text:hover {
+    background: none;
+}
+.button-text:active {
+    background: none;
+    color: var(--orange);
+}
+
 }
 
 @media (min-width: 769px) {
