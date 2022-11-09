@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import LoginPage from './login';
+import LoginPage from './auth/login';
 
 
 export default function Home() {
