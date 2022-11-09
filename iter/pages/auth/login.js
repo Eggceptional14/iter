@@ -5,8 +5,8 @@ import styles from '../../styles/Login.module.css'
 
 export default function LoginPage() {
     return (
-        <div className={styles.main}>
-            <div className={styles.container3}>
+        <div className={styles['main']}>
+            <div className={styles['container2']}>
                 <svg width="252" height="280" viewBox="0 0 252 280" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M125.55 241.1C169.484 241.1 205.1 205.484 205.1 161.55C205.1 117.616 169.484 82 125.55 82C81.6157 82 46 117.616 46 161.55C46 205.484 81.6157 241.1 125.55 241.1Z" fill="#EB6841"/>
                     <path d="M85 75H92.2511C92.2511 75 118.081 106.096 128.041 144.5C138 182.904 138 214 138 214H118.052C118.052 214 122.362 188.587 111.471 144.5C101.715 104.838 85 75 85 75Z" fill="#A26E3D"/>
@@ -34,7 +34,7 @@ export default function LoginPage() {
                     Sign Up
                 </Button>
             </div>
-            <div className={styles.container2}>
+            <div className={styles['container1']}>
                 <span>Sign In to Your Account</span>
                 <TextField
                     id="outlined-basic" 
