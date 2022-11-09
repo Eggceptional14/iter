@@ -73,6 +73,14 @@ background-color: #FF9B26;
     color: var(--orange);
 }
 
+.text-light {
+    font-weight: bold;
+    color: var(--light-ivory);
+}
+
+.text-dark {
+    font-weight: bold;
+    color: var(--black);
 }
 
 @media (min-width: 769px) {
