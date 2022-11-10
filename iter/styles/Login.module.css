@@ -120,6 +120,16 @@ background-color: var(--orange);
     opacity: 1;
 }
 
+.input-field {
+    width: 40%;
+    max-width: 300px;
+    margin: 10px;
+    font-family: inherit;
+}
+.input-field:active {
+    color: var(--orange);
+}
+
 @media (min-width: 769px) {
 
 }
