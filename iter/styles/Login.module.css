@@ -92,6 +92,7 @@
 .button-text2 {
     color: var(--blue);
     font-weight: 500;
+    font-size: 18px;
 }
 .button-text2:active {
     color: var(--orange);
@@ -154,5 +155,6 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin-top: 20px;
     }
 }
