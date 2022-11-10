@@ -74,6 +74,12 @@ export default function LoginPage() {
                         <FontAwesomeIcon icon={faFacebook} style={{color: '#4267B2'}}/>
                      </IconButton>
                 </div>
+                <div className={styles['container4']}>
+                    <span>New to Iter?</span>
+                    <ButtonUnstyled type="button" varient="text" className={[styles['button-text'], styles['button-text2']].join(" ")} style={{margin: 0}}>
+                        Register now
+                    </ButtonUnstyled>
+                </div>
             </div>
         </div>
     )
