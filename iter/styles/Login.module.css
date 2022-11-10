@@ -79,10 +79,8 @@ background-color: var(--orange);
     font-size: 0.9rem;
 }
 .button-text:hover {
-    background: none;
 }
 .button-text:active {
-    background: none;
     color: var(--orange);
 }
 
