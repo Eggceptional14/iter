@@ -122,13 +122,15 @@
     border: 3px solid var(--blue);
     background-color: var(--blue);
     width: 8vw;
+    min-width: 130px;
     opacity: 1;
 }
 .line2 {
     border: 1px solid var(--black);
     background-color: var(--black);
     margin: 1rem;
-    width: 8vw;
+    width: 5vw;
+    min-width: 80px;
     opacity: 1;
 }
 
