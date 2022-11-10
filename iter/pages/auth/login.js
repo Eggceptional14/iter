@@ -37,8 +37,8 @@ export default function LoginPage() {
                 </Button>
             </div>
             <div className={styles['container1']}>
-                <span>Sign In to Your Account</span>
-                <hr size='6' width='150'/>
+                <span className={styles['text-header-blue']}>Sign In to Your Account</span>
+                <hr size='6' className={styles['line1']}/>
                 <TextField
                     id="outlined-basic" 
                     label="Email"
@@ -59,9 +59,10 @@ export default function LoginPage() {
                     Forgot Your Password?
                 </ButtonUnstyled>
                 <div className={styles['container3']}>
-                    <hr size='5' width='150'/>
-                    <span>or login using</span>
-                    <hr size='5' width='150'/>
+                    <hr size='5' className={styles['line2']}/>
+                    <span className={styles['text-header-sec']}>or login using</span>
+                    <hr size='5' className={styles['line2']}/>
+                </div>
                 <div className={styles['container3']}>
                      <IconButton className={styles['button-icon']}>
                         <FontAwesomeIcon icon={faApple} style={{color: 'black'}}/>
