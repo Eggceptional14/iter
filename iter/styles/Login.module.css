@@ -73,6 +73,10 @@ background-color: var(--orange);
 .button-text {
     border: none;
     background: none;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    transition: color .2s;
+    font-size: 0.9rem;
 }
 .button-text:hover {
     background: none;
