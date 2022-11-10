@@ -75,7 +75,7 @@ export default function LoginPage() {
                      </IconButton>
                 </div>
                 <div className={styles['container4']}>
-                    <span>New to Iter?</span>
+                    <span style={{fontSize: '18px'}}>New to Iter?</span>
                     <ButtonUnstyled type="button" varient="text" className={[styles['button-text'], styles['button-text2']].join(" ")} style={{margin: 0}}>
                         Register now
                     </ButtonUnstyled>
