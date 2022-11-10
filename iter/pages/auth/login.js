@@ -1,5 +1,9 @@
 import { TextField, Button } from '@mui/material';
 import { ButtonUnstyled } from '@mui/base';
+import { TextField, Button, IconButton } from '@mui/material';
+import { ButtonUnstyled, InputUnstyled } from '@mui/base';
+import { faApple, faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from '../../styles/Login.module.css'
 
 
@@ -60,6 +64,16 @@ export default function LoginPage() {
                     <hr size='5' width='150'/>
                     <span>or login using</span>
                     <hr size='5' width='150'/>
+                <div className={styles['container3']}>
+                     <IconButton className={styles['button-icon']}>
+                        <FontAwesomeIcon icon={faApple} style={{color: 'black'}}/>
+                     </IconButton>
+                     <IconButton className={styles['button-icon']}>
+                        <FontAwesomeIcon icon={faGoogle} style={{color: '#DB4437'}}/>
+                     </IconButton>
+                     <IconButton className={styles['button-icon']}>
+                        <FontAwesomeIcon icon={faFacebook} style={{color: '#4267B2'}}/>
+                     </IconButton>
                 </div>
             </div>
         </div>
