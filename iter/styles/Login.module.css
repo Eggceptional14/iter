@@ -85,6 +85,10 @@ background-color: var(--orange);
     color: var(--orange);
 }
 
+.button-icon {
+    margin: 0 1rem 0 1rem;
+    min-width: 45px;
+    min-height: 45px;
 }
 
 .text-header-white {
