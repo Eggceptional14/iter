@@ -30,8 +30,9 @@
 }
 
 .button-prim {
-    width: 10em;
-    height: 3em;
+    width: 40%;
+    max-width: 300px;
+    min-height: 45px;
     border: 0;
     border-radius: 15px;
     background-color: var(--orange);
@@ -48,8 +49,9 @@ background-size: 200% 200%;
 background-color: var(--orange);
 }
 .button-sec {
-    width: 10em;
-    height: 3em;
+    width: 50%;
+    max-width: 250px;
+    min-height: 30px;
     background: none;
     border: 2px solid var(--light-ivory);
     border-radius: 15px;
