@@ -85,13 +85,20 @@ background-color: var(--orange);
     color: var(--orange);
 }
 
-.text-light {
-    font-weight: bold;
-    color: var(--light-ivory);
 }
 
-.text-dark {
-    font-weight: bold;
+.text-header-white {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--light-ivory);
+}
+.text-header-blue {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--blue);
+}
+.text-header-sec {
+    font-weight: 500;
     color: var(--black);
 }
 
