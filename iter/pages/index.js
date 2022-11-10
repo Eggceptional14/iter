@@ -9,6 +9,7 @@ export default function Home() {
     <div className={styles.main}>
       {/* <Button type="button" className={styles.button}>Test</Button> */}
       <LoginPage></LoginPage>
+      
       {/* <ButtonGroup variant="outlined" aria-label="outlined button group">
         <Button>One</Button>
         <Button>Two</Button>
