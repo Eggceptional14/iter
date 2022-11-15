@@ -2,6 +2,7 @@ import { TextField, Button, IconButton } from '@mui/material';
 import { ButtonUnstyled, InputUnstyled } from '@mui/base';
 import { faApple, faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import LoginForm from '../../src/sections/auth/LoginForm'
 import styles from '../../styles/Login.module.css'
 
 
@@ -37,6 +38,10 @@ export default function LoginPage() {
                 </Button>
             </div>
             <div className={styles['container1']}>
+              <LoginForm />
+            </div>
+            
+            {/* <div className={styles['container1']}>
                 <span className={styles['text-header-blue']}>Sign In to Your Account</span>
                 <hr size='6' className={styles['line1']}/>
                 <TextField
@@ -80,7 +85,7 @@ export default function LoginPage() {
                         Register now
                     </ButtonUnstyled>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
