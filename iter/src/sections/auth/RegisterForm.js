@@ -113,7 +113,7 @@ export default function RegisterForm() {
                   className={styles['input-field']}
                   {...field}
                   fullWidth
-                  inputProps={{ style: { backgroundColor: 'white'}}}
+                  inputProps={{ style: { backgroundColor: 'white', borderRadius: '20px'}}}
                   error={Boolean(error)}
                   helperText={error?.message}
                 />
