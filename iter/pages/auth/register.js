@@ -12,9 +12,7 @@ export default function RegisterPage() {
     
     return (
         <div className={styles['main']}>
-            <div className={styles['container1']} style={{backgroundColor: 'var(--blue)'}}>
-              <Registerform />
-            </div>
+            
             <div className={styles['container2']} style={{backgroundColor: 'var(--white)'}}>
                 <svg width="252" height="280" viewBox="0 0 252 280" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M125.55 241.1C169.484 241.1 205.1 205.484 205.1 161.55C205.1 117.616 169.484 82 125.55 82C81.6157 82 46 117.616 46 161.55C46 205.484 81.6157 241.1 125.55 241.1Z" fill="#EB6841"/>
@@ -37,15 +35,14 @@ export default function RegisterPage() {
                     <path d="M165.113 129.426L155.75 133.474L147.041 122.025L153.419 114.052L144.056 118.1L135.347 106.651L141.725 98.6783L132.362 102.726L124.225 92.0135C133.875 84.6536 151.252 91.2366 163.028 106.733C174.804 122.189 176.521 140.711 166.871 148.071L158.735 137.399L165.113 129.426Z" fill="#37AA37"/>
                     <path d="M251.75 279.931C233.15 237.081 183.8 206.431 125.85 206.431C67.9 206.431 18.6 237.081 0 279.931H125.875H251.75Z" fill="#F8DF88"/>
                 </svg>
-                <span className={styles['text-header-white']} style={{marginTop: '15px', color:'var(--blue)', marginBottom: '20px'}}>Already got an account?</span>
-                <Button 
-                    type="button" 
-                    className={styles['button-sec']} 
-                    style={{color:'var(--blue)', borderColor: 'var(--blue)'}}
-                    onClick={()=>{router.push('/auth/login')}}
-                    >
-                    Sign In
+                <span className={styles['text-header-white']} style={{marginTop: '15px', color:"#56BEEC"}}>Already a member?</span>
+                <span className={styles['text-header-white']} style={{marginBottom: '15px', fontSize: '20px', color:"#56BEEC"}}>Log in here</span>
+                <Button type="button" className={styles['button-sec']}>
+                    Sign Up
                 </Button>
+            </div>
+            <div className={styles['container1']} style={{backgroundColor: 'var(--blue)'}}>
+              <Registerform />
             </div>
             {/* <div className={styles['container1']}>
               <Registerform />
