@@ -146,7 +146,6 @@ export default function RegisterForm() {
                   id="outlined-basic" 
                   label="Password" 
                   variant="outlined" 
-                  type="password"
                   className={styles['input-field']}
                   {...field}
                   fullWidth
