@@ -4,9 +4,12 @@ import { faApple, faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import LoginForm from '../../src/sections/auth/LoginForm'
 import styles from '../../styles/Login.module.css'
+import { useRouter, Router } from 'next/router';
 
 
 export default function LoginPage() {
+    const router = useRouter()
+
     return (
         <div className={styles['main']}>
             <div className={styles['container2']}>
@@ -33,7 +36,11 @@ export default function LoginPage() {
                 </svg>
                 <span className={styles['text-header-white']} style={{marginTop: '15px'}}>Don't have an account?</span>
                 <span className={styles['text-header-white']} style={{marginBottom: '15px', fontSize: '20px'}}>Join us</span>
-                <Button type="button" className={styles['button-sec']}>
+                <Button 
+                    type="button" 
+                    className={styles['button-sec']}
+                    onClick={()=>{router.push('/auth/register')}}
+                    >
                     Sign Up
                 </Button>
             </div>

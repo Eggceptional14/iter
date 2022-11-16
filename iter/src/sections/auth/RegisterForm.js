@@ -197,7 +197,7 @@ export default function RegisterForm() {
             />
 
             <Button type="button" className={styles['button-prim']}>
-                Sign In
+                Sign Up
             </Button>
             <ButtonUnstyled type="button" varient="text" className={styles['button-text']} style={{color: 'white'}}>
                 Forgot Your Password?
