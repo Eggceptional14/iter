@@ -112,7 +112,8 @@ export default function RegisterForm() {
                   className={styles['input-field']}
                   {...field}
                   fullWidth
-                  inputProps={{ style: { backgroundColor: 'white', borderRadius: '20px'}}}
+                  InputLabelProps={{className: styles['input-label']}}
+                  InputProps={{className: styles['input-prop']}}
                   error={Boolean(error)}
                   helperText={error?.message}
                 />
@@ -130,7 +131,8 @@ export default function RegisterForm() {
                   className={styles['input-field']}
                   {...field}
                   fullWidth
-                  inputProps={{ style: { backgroundColor: 'white'}}}
+                  InputLabelProps={{className: styles['input-label']}}
+                  InputProps={{className: styles['input-prop']}}
                   error={Boolean(error)}
                   helperText={error?.message}
                 />
@@ -149,8 +151,9 @@ export default function RegisterForm() {
                   {...field}
                   fullWidth
                   type={showPassword ? 'text' : 'password'}
+                  InputLabelProps={{className: styles['input-label']}}
                   InputProps={{
-                    style: {backgroundColor: 'white'},
+                    className: styles['input-prop'],
                     endAdornment: (
                       <InputAdornment position="end">
                         <IconButton onClick={handleShowPassword} edge="end">
@@ -177,8 +180,9 @@ export default function RegisterForm() {
                   {...field}
                   fullWidth
                   type={showConfirmPassword ? 'text' : 'password'}
+                  InputLabelProps={{className: styles['input-label']}}
                   InputProps={{
-                    style: {backgroundColor: 'white'},
+                    className: styles['input-prop'],
                     endAdornment: (
                       <InputAdornment position="end">
                         <IconButton onClick={handleShowConfirmPassword} edge="end">
