@@ -97,6 +97,7 @@ export default function RegisterForm() {
       </Alert>
     </Snackbar>
 
+    <form onSubmit={handleSubmit(onSubmit)} className={styles['container1']}>
         <div className={styles['container1']}>
             <span className={styles['text-header-white']}>Join Our Community</span>
             <hr size='6' className={styles['line1']} style={{color: 'white', borderColor: 'white'}}/>
