@@ -106,7 +106,6 @@ export default function LoginForm() {
                   id="outlined-basic" 
                   label="Password" 
                   variant="outlined" 
-                  type="password"
                   className={styles['input-field']}
                   {...field}
                   fullWidth
@@ -134,7 +133,6 @@ export default function LoginForm() {
                   id="outlined-basic" 
                   label="Password" 
                   variant="outlined" 
-                  type="password"
                   className={styles['input-field']}
                   {...field}
                   fullWidth
