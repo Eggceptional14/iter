@@ -97,8 +97,6 @@ export default function RegisterForm() {
       </Alert>
     </Snackbar>
 
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <Stack spacing={100} alignItems="center">
         <div className={styles['container1']}>
             <span className={styles['text-header-white']}>Join Our Community</span>
             <hr size='6' className={styles['line1']} style={{color: 'white', borderColor: 'white'}}/>
@@ -220,7 +218,6 @@ export default function RegisterForm() {
                 </ButtonUnstyled>
             </div>
         </div>
-      </Stack>
     </form>
 
     {/* <form onSubmit={handleSubmit(onSubmit)}>
