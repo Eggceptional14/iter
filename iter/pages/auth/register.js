@@ -43,7 +43,7 @@ export default function RegisterPage() {
                     style={{color: 'var(--blue)', borderColor: 'var(--blue)'}}
                     onClick={()=>{router.push('/auth/login')}}
                     >
-                    Sign Up
+                    Sign In
                 </Button>
             </div>
             <div className={styles['container1']} style={{backgroundColor: 'var(--blue)'}}>
