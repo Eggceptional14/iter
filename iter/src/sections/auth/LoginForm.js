@@ -28,7 +28,7 @@ import {
 // components
 import Iconify from '../../components/Iconify';
 // styles
-import styles from '../../../styles/Login.module.css'
+import styles from '../../../styles/Auth.module.css'
 import { faApple, faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // ----------------------------------------------------------------------
