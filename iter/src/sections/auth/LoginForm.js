@@ -88,12 +88,11 @@ export default function LoginForm() {
               render={({ field, fieldState: { error } }) => (
                 <TextField
                   id="outlined-basic"
-                  label="Email"
+                  label="Email Address"
                   variant="outlined"
                   className={styles['input-field']}
                   {...field}
                   fullWidth
-                  label={"Email address"}
                   error={Boolean(error)}
                   helperText={error?.message}
                 />
