@@ -33,7 +33,7 @@
 }
 
 .button-prim {
-    width: 40%;
+    width: 60%;
     min-width: 250px;
     max-width: 300px;
     min-height: 45px;
@@ -49,11 +49,22 @@
     color: var(--light-ivory);
     font-weight: bold;
 }
-
 .button-prim:hover {
     background-size: 200% 200%;
     background-color: var(--orange);
 }
+
+.button-prim-revert {
+    background-color: var(--light-ivory);
+    background-image: radial-gradient(at bottom, var(--orange) 50%, transparent 50%);
+    color: var(--orange);
+}
+.button-prim-revert:hover {
+    background-size: 200% 200%;
+    color: var(--light-ivory);
+    background-color: var(--light-ivory);
+}
+
 .button-sec {
     width: 50%;
     max-width: 250px;
@@ -72,6 +83,16 @@
 .button-sec:hover {
     background-size: 200% 200%;
     color: var(--orange);
+}
+
+.button-sec-revert {
+    background-image: radial-gradient(at bottom, var(--blue) 50%, transparent 50%);
+    border-color: var(--blue);
+    color: var(--blue);
+}
+.button-sec-revert:hover {
+    background-size: 200% 200%;
+    color: var(--light-ivory);
 }
 
 .button-text {
@@ -96,6 +117,16 @@
 }
 .button-text2:active {
     color: var(--orange);
+}
+
+.button-text-revert {
+    color: var(--yellow);
+}
+.button-text-revert:hover {
+    color: var(--orange);
+}
+.button-text-revert:active {
+    color: var(--yellow);
 }
 
 .button-icon {
@@ -136,14 +167,25 @@
 }
 
 .input-field {
-    width: 40%;
+    width: 60%;
     min-width: 250px;
     max-width: 300px;
     margin: 10px;
+    border: none;
     font-family: inherit;
 }
-.input-field:active {
-    color: var(--orange);
+
+.input-prop {
+    border: none;
+    border-radius: 15px;
+    font-family: 'Asap', sans-serif;
+    background-color: var(--light-ivory);
+    color: var(--black);
+}
+
+.input-label {
+    font-weight: 500;
+    color: var(--black);
 }
 
 @media (max-width: 900px) {
