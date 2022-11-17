@@ -214,9 +214,14 @@ export default function RegisterForm() {
                     </IconButton>
             </div>
             <div className={styles['container4']}>
-                <span style={{fontSize: '18px'}}>New to Iter?</span>
-                <ButtonUnstyled type="button" varient="text" className={[styles['button-text'], styles['button-text2']].join(" ")} style={{margin: 0}}>
-                    Register now
+                <span style={{fontSize: '18px', fontWeight:400, color: 'var(--light-ivory)'}}>Already a member?</span>
+                <ButtonUnstyled 
+                  type="button" 
+                  varient="text" 
+                  className={[styles['button-text'], styles['button-text2'], styles['button-text-revert']].join(" ")} 
+                  style={{margin: 0}}
+                  onClick={()=>{router.push('/auth/login')}}>
+                    Log in here!
                 </ButtonUnstyled>
             </div>
         </div>
