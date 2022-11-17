@@ -198,7 +198,7 @@ export default function RegisterForm() {
               )}
             />
 
-            <Button type="button" className={styles['button-prim']}>
+            <Button type="button" style={{marginBottom: '15px'}} className={[styles['button-prim'], styles['button-prim-revert']].join(" ")}>
                 Sign Up
             </Button>
             <ButtonUnstyled type="button" varient="text" className={styles['button-text']} style={{color: 'white'}}>
