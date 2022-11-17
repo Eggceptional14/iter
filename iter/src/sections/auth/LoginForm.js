@@ -78,6 +78,7 @@ export default function LoginForm() {
       </Alert>
     </Snackbar>
 
+    <form onSubmit={handleSubmit(onSubmit)} className={styles['container1']}>
         <div className={styles['container1']}>
             <span className={styles['text-header-blue']}>Sign In to Your Account</span>
             <hr size='6' className={styles['line1']}/>
