@@ -100,7 +100,7 @@ export default function RegisterForm() {
     <form onSubmit={handleSubmit(onSubmit)} className={styles['container1']}>
         <div className={styles['container1']}>
             <span className={styles['text-header-white']}>Join Our Community</span>
-            <hr size='6' className={styles['line1']} style={{color: 'white', borderColor: 'white'}}/>
+            <hr size='6' className={styles['line1']} style={{color: 'var(--light-ivory)', borderColor: 'var(--light-ivory)', backgroundColor: 'var(--light-ivory)'}}/>
             <Controller
               name="firstName"
               control={control}
