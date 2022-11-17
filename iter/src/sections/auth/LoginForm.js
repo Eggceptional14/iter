@@ -78,8 +78,6 @@ export default function LoginForm() {
       </Alert>
     </Snackbar>
 
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <Stack spacing={100} alignItems="center">
         <div className={styles['container1']}>
             <span className={styles['text-header-blue']}>Sign In to Your Account</span>
             <hr size='6' className={styles['line1']}/>
@@ -180,7 +178,6 @@ export default function LoginForm() {
                 </ButtonUnstyled>
             </div>
         </div>
-      </Stack>
     </form>
 
     {/* <form onSubmit={handleSubmit(onSubmit)}>
