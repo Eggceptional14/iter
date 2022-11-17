@@ -93,6 +93,8 @@ export default function LoginForm() {
                   className={styles['input-field']}
                   {...field}
                   fullWidth
+                  InputLabelProps={{className: styles['input-label']}}
+                  InputProps={{className: styles['input-prop']}}
                   error={Boolean(error)}
                   helperText={error?.message}
                 />
@@ -110,7 +112,9 @@ export default function LoginForm() {
                   {...field}
                   fullWidth
                   type={showPassword ? 'text' : 'password'}
+                  InputLabelProps={{className: styles['input-label']}}
                   InputProps={{
+                    className: styles['input-prop'],
                     endAdornment: (
                       <InputAdornment position="end">
                         <IconButton onClick={handleShowPassword} edge="end">
@@ -137,7 +141,9 @@ export default function LoginForm() {
                   {...field}
                   fullWidth
                   type={showPassword ? 'text' : 'password'}
+                  InputLabelProps={{className: styles['input-label']}}
                   InputProps={{
+                    className: styles['input-prop'],
                     endAdornment: (
                       <InputAdornment position="end">
                         <IconButton onClick={handleShowPassword} edge="end">
