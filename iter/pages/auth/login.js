@@ -3,7 +3,7 @@ import { ButtonUnstyled, InputUnstyled } from '@mui/base';
 import { faApple, faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import LoginForm from '../../src/sections/auth/LoginForm'
-import styles from '../../styles/Login.module.css'
+import styles from '../../styles/Auth.module.css'
 import { useRouter, Router } from 'next/router';
 
 
