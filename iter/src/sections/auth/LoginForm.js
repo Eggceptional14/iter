@@ -163,7 +163,7 @@ export default function LoginForm() {
             <ButtonUnstyled type="button" varient="text" className={styles['button-text']}>
                 Forgot Your Password?
             </ButtonUnstyled>
-            <Divider style={{width:'90%'}}>or login using</Divider>
+            <Divider variant='middle' style={{width:'60%', maxWidth: '300px'}}>or login using</Divider>
             <div className={styles['container3']}>
                     <IconButton className={styles['button-icon']}>
                     <FontAwesomeIcon icon={faApple} style={{color: 'black'}}/>
