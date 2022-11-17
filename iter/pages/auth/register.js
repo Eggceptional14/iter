@@ -39,8 +39,7 @@ export default function RegisterPage() {
                 <span className={styles['text-header-white']} style={{marginBottom: '15px', fontSize: '20px', color:"var(--blue)"}}>Log in here</span>
                 <Button 
                     type="button" 
-                    className={styles['button-sec']}
-                    style={{color: 'var(--blue)', borderColor: 'var(--blue)'}}
+                    className={[styles['button-sec'], styles['button-sec-revert']].join(" ")}
                     onClick={()=>{router.push('/auth/login')}}
                     >
                     Sign In
