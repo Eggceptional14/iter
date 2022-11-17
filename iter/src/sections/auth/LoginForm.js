@@ -178,6 +178,7 @@ export default function LoginForm() {
             <div className={styles['container4']}>
                 <span style={{fontSize: '18px'}}>New to Iter?</span>
                 <ButtonUnstyled type="button" varient="text" className={[styles['button-text'], styles['button-text2']].join(" ")} style={{margin: 0}}>
+                  onClick={()=>{router.push('/auth/register')}}>
                     Register now
                 </ButtonUnstyled>
             </div>
