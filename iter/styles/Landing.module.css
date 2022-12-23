@@ -15,9 +15,9 @@
   align-items: center;
 }
 .container-2 {
-  width: 200px;
+  /* width: 200px; */
   text-align: center;
-  min-height: 100vh;
+  min-height: 20vh;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -140,6 +140,13 @@
   min-height: 45px;
 }
 
+.button-plain {
+  background-color: var(--orange);
+  color: white;
+  border-radius: 15px;
+  
+}
+
 .text-header-white {
   font-weight: 600;
   font-size: 24px;
@@ -238,4 +245,9 @@
   .nav__link:hover:before{
    width: 100%;
   }
+}
+
+/* slider */
+.slick-test div {
+  background-color: none !important;
 }
