@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React from 'react';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,13 +13,20 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { styled, alpha } from '@mui/material/styles';
+import InputBase from '@mui/material/InputBase';
+import SearchIcon from '@mui/icons-material/Search';
 
-const pages = ['Button', 'Button', 'Button', 'Button', 'Button'];
+
+
+const pages = ['Explore', 'Explore', 'Explore', 'Explore', 'Explore'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
+  //nav bar
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -35,8 +43,49 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
+  //searchbar
+  const Search = styled('div')(({ theme }) => ({
+    position: 'relative',
+    borderRadius: 20,
+    backgroundColor: '#F5EBDB',
+    // '&:hover': {
+    //   backgroundColor: alpha(theme.palette.common.black, 0.10),
+    // },
+    marginRight: theme.spacing(5),
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(3),
+      width: 'auto',
+    },
+  }));
+  
+  const SearchIconWrapper = styled('div')(({ theme }) => ({
+    padding: theme.spacing(0, 2),
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }));
+  
+  const StyledInputBase = styled(InputBase)(({ theme }) => ({
+    color: 'inherit',
+    '& .MuiInputBase-input': {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('md')]: {
+        width: '25ch',
+      },
+    },
+  }));
+
   return (
-    <AppBar position="static" sx={{ background:'var(--light-ivory)', boxShadow:'none', mt: 3 }}>
+    <AppBar position="static" sx={{ background:'var(--light-ivory)', boxShadow:'none', mt: 3, padding: '0 5% 0 5%' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -45,17 +94,29 @@ function ResponsiveAppBar() {
             component="a"
             href="/"
             sx={{
-              mr: 20,
+              mr: 15,
               display: { xs: 'none', md: 'flex' },
               fontWeight: 900,
               letterSpacing: '.3rem',
               color: 'var(--black)',
+              '&:hover': {
+                color: 'var(--black)',
+              },
               textDecoration: 'none',
             }}
           >
             ITER
           </Typography>
-
+          <Search sx={{display: { xs: 'none', md: 'flex' }}}>
+            <SearchIconWrapper>
+              <SearchIcon style={{color: 'black'}}/>
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search for your destination !"
+              inputProps={{ 'aria-label': 'search' }}
+              style={{color: 'black'}}
+            />
+          </Search>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -93,7 +154,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
