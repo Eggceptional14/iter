@@ -1,6 +1,6 @@
 # Project Iter
 
-Project Iter make traveling more convenient and simple for everyone by providing a personalized and customizable plan and activities to financially assist users.
+Project Iter make traveling more convenient and simple for everyone by providing a personalized and customizable plan and activities to financially assist users. This repositories contain a front-end part of the project.
 
 ## Prerequisites
 
