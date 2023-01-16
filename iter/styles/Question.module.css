@@ -1,0 +1,203 @@
+.main {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.container1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 3;
+}
+.container2 {
+    width: 75%;
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
+}
+.container3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container4 {
+    display: none;
+}
+
+.button-prim {
+    width: 60%;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 45px;
+    border: 0;
+    border-radius: 15px;
+    margin-top: 1.5rem;
+    background-color: var(--orange);
+    background-image: radial-gradient(at bottom, var(--blue) 50%, transparent 50%);
+    background-repeat: no-repeat;
+    transition: background-size .5s, color .5s;
+    background-size: 0 0;
+    background-position: 50% 100%;
+    color: var(--light-ivory);
+    font-weight: bold;
+}
+.button-prim:hover {
+    background-size: 200% 200%;
+    background-color: var(--orange);
+}
+
+.button-prim-revert {
+    background-color: var(--light-ivory);
+    background-image: radial-gradient(at bottom, var(--orange) 50%, transparent 50%);
+    color: var(--orange);
+}
+.button-prim-revert:hover {
+    background-size: 200% 200%;
+    color: var(--light-ivory);
+    background-color: var(--light-ivory);
+}
+
+.button-sec {
+    width: 50%;
+    max-width: 250px;
+    min-height: 30px;
+    background: none;
+    border: 2px solid var(--light-ivory);
+    border-radius: 15px;
+    background-image: radial-gradient(at bottom, var(--light-ivory) 50%, transparent 50%);
+    background-repeat: no-repeat;
+    transition: background-size .5s, color .5s;
+    background-size: 0 0;
+    background-position: 50% 100%;
+    color: var(--light-ivory);
+    font-weight: bold;
+}
+.button-sec:hover {
+    background-size: 200% 200%;
+    color: var(--orange);
+}
+
+.button-sec-revert {
+    background-image: radial-gradient(at bottom, var(--blue) 50%, transparent 50%);
+    border-color: var(--blue);
+    color: var(--blue);
+}
+.button-sec-revert:hover {
+    background-size: 200% 200%;
+    color: var(--light-ivory);
+}
+
+.button-text {
+    border: none;
+    background: none;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    transition: color .2s;
+    font-size: 0.9rem;
+}
+.button-text:hover {
+    color: var(--blue);
+}
+.button-text:active {
+    color: var(--orange);
+}
+
+.button-text2 {
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 18px;
+}
+.button-text2:active {
+    color: var(--orange);
+}
+
+.button-text-revert {
+    color: var(--yellow);
+}
+.button-text-revert:hover {
+    color: var(--orange);
+}
+.button-text-revert:active {
+    color: var(--yellow);
+}
+
+.button-icon {
+    margin: 0 1rem 0 1rem;
+    min-width: 45px;
+    min-height: 45px;
+}
+
+.text-header-white {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--light-ivory);
+}
+.text-header-blue {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--blue);
+}
+.text-header-sec {
+    font-weight: 500;
+    color: var(--black);
+}
+
+.line1 {
+    border: 3px solid var(--blue);
+    background-color: var(--blue);
+    width: 8vw;
+    min-width: 130px;
+    opacity: 1;
+}
+.line2 {
+    border: 1px solid var(--black);
+    background-color: var(--black);
+    margin: 1rem;
+    width: 5vw;
+    min-width: 80px;
+    opacity: 1;
+}
+
+.input-field {
+    width: 60%;
+    min-width: 250px;
+    max-width: 300px;
+    margin: 10px;
+    border: none;
+    font-family: inherit;
+}
+
+.input-prop {
+    border: none;
+    border-radius: 15px;
+    font-family: 'Asap', sans-serif;
+    background-color: var(--light-ivory);
+    color: var(--black);
+}
+
+.input-label {
+    font-weight: 500;
+    color: var(--black);
+}
+
+@media (max-width: 900px) {
+    .container2 {
+        display: none;
+    }
+    .container4{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
