@@ -34,6 +34,17 @@
   padding-top: 5rem;
 }
 
+.containerMain2 {
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  padding-top: 5rem;
+}
+
 .main {
   min-height: 100vh;
   flex: 1;

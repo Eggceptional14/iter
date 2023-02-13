@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter, Router } from 'next/router';
 import styles from '../styles/Home.module.css';
 import Navbar from '../src/components/Navbar';
 import MultiCarousel from '../src/components/Carousel';
@@ -11,6 +12,8 @@ import {
 } from '@mui/icons-material';
 
 export default function Home() {
+  const router = useRouter()
+
   const DESCRIPTIONS =[
     {
       title: `Users`,
@@ -41,17 +44,25 @@ export default function Home() {
       <Typography variant='h6' sx={{ width:'13em', textAlign:'center', fontSize:15, fontWeight:600 }}>
         An organized way to plan a trip with your friends !
       </Typography>
-
-      <Button variant='contained' sx={{ 
-        backgroundColor:'var(--orange)',
-        "&:hover":{
-          backgroundColor:'var(--ivory-white)',
-        },
-        borderRadius:'20px',
-        padding:'0.5em 3em 0.5em 3em',
-        mt:'1em',
-        fontWeight:600,
-      }}>Start Planning!</Button>
+      <Button 
+        onClick={()=>{
+          router.push('/question/GeneralQuestion')
+        }}
+        variant='contained' 
+        sx={{ 
+          backgroundColor:'var(--orange)',
+          "&:hover":{
+            backgroundColor:'var(--orange)',
+          },
+          borderRadius:'20px',
+          padding:'0.5em 3em 0.5em 3em',
+          mt:'1em',
+          fontWeight:600,
+          zIndex:2,
+        }}
+      >
+        Start Planning!
+      </Button>
 
       <div style={{ position:'absolute', zIndex:0, top:120}}>
         <svg width="1440" height="590" viewBox="0 0 1440 590" fill="none" xmlns="http://www.w3.org/2000/svg">

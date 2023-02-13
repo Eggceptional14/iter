@@ -11,13 +11,27 @@ import {
   Box,
 } from '@mui/material';
 import * as Yup from 'yup';
-import { ButtonUnstyled, InputUnstyled } from '@mui/base';
-import { faApple, faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import LoginForm from '../../src/sections/auth/LoginForm'
 import styles from '../../styles/Question.module.css'
 import { useRouter, Router } from 'next/router';
 import GeneralQuestionNavbar from '../../src/components/GeneralQuestionNavbar';
+import dayjs from 'dayjs';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  datePicker: {
+    borderRadius: '50px',
+    '& .MuiOutlinedInput-root': {
+      backgroundColor: '#e0e0e0',
+      borderRadius: 50,
+      padding: 10,
+      width:'20em',
+      height:'3.5em'
+    },
+  },
+});
 
 const emailSchema = Yup.object().shape({
   email: Yup.string().email().required(),
@@ -34,6 +48,11 @@ export default function GeneralQuestion() {
     const [email, setEmail] = useState('');
     const [emailTags, setEmailTags] = useState([]);
     const [error, setError] = useState('');
+
+    //date
+    const [dateValue, setDateValue] = React.useState(dayjs('2022-04-07'));
+    const [dates, setDates] = useState([dayjs(), dayjs().add(7, 'day')]);
+    const classes = useStyles();
 
     const handleAddEmail = async () => {
       try {
@@ -72,7 +91,7 @@ export default function GeneralQuestion() {
             </defs>
             </svg>
           </div>
-          <Stack direction="column" spacing={2} sx={{ mt:'4em', position: 'absolute', justifyContent: 'center'  }}>
+          <Stack direction="column" spacing={2} sx={{ mt:'4em', position: 'absolute', justifyContent: 'center' }}>
             <Stack direction="row" spacing={1} sx={{ mt:'4em', alignItems:'center' }}>
               <ArrowCircleDownIcon style={{ transform: 'rotate(90deg)',fontSize:'40px', color: 'var(--blue)' }}/>
               <h1 style={{ color:'var(--orange)', fontSize:50, fontWeight:'700', letterSpacing:1.2, color: 'var(--blue)' }}>Plan your journey!</h1>
@@ -134,10 +153,36 @@ export default function GeneralQuestion() {
               </IconButton>
             )} */}
           </div>
+
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <Stack spacing={3} direction="row">
+            <DesktopDatePicker
+              value={dateValue}
+              minDate={dayjs('2017-01-01')}
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+              // renderInput={(params) => <TextField {...params} />}
+              className={classes.datePicker}
+              renderInput={(params) => <TextField {...params} />}
+            />
+            <DesktopDatePicker
+              value={dateValue}
+              minDate={dayjs('2017-01-01')}
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+              // renderInput={(params) => <TextField {...params} />}
+              className={classes.datePicker}
+              renderInput={(params) => <TextField {...params} />}
+            />
+            </Stack>
+          </LocalizationProvider>
+
           <TextField
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            label="Enter email address"
+            label="Travellers"
             variant="outlined"
             type="email"
             onKeyPress={(event) => {
@@ -172,6 +217,37 @@ export default function GeneralQuestion() {
               />
             ))}
           </div>
+          
+          <Button 
+            onClick={()=>{
+              router.push('/question/PersonalQuestion')
+            }}
+            variant='contained' 
+            size="large"
+            sx={{ 
+              width:'20em',
+              backgroundColor:'var(--blue)',
+              "&:hover":{
+                backgroundColor:'var(--blue)',
+              },
+              borderRadius:'20px',
+              padding:'0.5em 3em 0.5em 3em',
+              mt:'1em',
+              fontWeight:600,
+              zIndex:2,
+            }}
+          >
+            Continue to Questions
+          </Button>
+          <p 
+            style={{ 
+              margin:"0px 0px 0px 0px",
+              fontSize:"12px"
+            }}
+          >
+            Already have a plan in mind?
+            <a style={{ color: 'var(--orange'}} href="/">Create a blank plan</a>
+          </p>
           </Stack>
         </>
     )
