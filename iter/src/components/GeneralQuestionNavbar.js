@@ -19,7 +19,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 
 
-const pages = ['Explore', 'Explore', 'Explore', 'Explore', 'Explore'];
+const pages = ['Destination', 'Blog', 'Collaborate', 'Itinerary'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -84,7 +84,7 @@ function ResponsiveAppBar() {
     },
   }));
 
-  return (
+  return (   
     <AppBar position="static" sx={{ background:'var(--blue)', height: '2rem', boxShadow:'none', mt: 3, padding: '0 5% 0 5%' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>

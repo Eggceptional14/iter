@@ -16,20 +16,28 @@ const steps = [
   {
     label: 'What is your budget for this trip?',
     slider: true,
-    range: [0, 1000],
-    step: 50,
+    range: [0, 10000],
+    step: 500,
   },
   {
-    label: 'What is your target types of attraction for this trip?',
-    options: ['Beach', 'Mountain', 'Historical', 'Adventure'],
+    label: 'What is kind of trip you are going for?',
+    options: ['Fast-paced', 'Medium', 'Slow & easy'],
   },
   {
-    label: 'What is your target types of attraction for this trip?',
-    options: ['Beach', 'Mountain', 'Historical', 'Adventure'],
+    label: ' What is your target types of attraction for this trip?',
+    options: ['Educational', 'Historical', 'Market & Shopping', 'Nature', 'Recreational & Entertainment', 'Chillout', 'Cultural', 'Sport'],
   },
   {
-    label: 'What is your target types of attraction for this trip?',
-    options: ['Beach', 'Mountain', 'Historical', 'Adventure'],
+    label: 'What is your preferred activities?',
+    options: ['Educational Activities', 'Extreme Sports ', 'Shopping', 'Religious Activities', 'Sports', 'Nature Sightseeing', 'Cultural Activities', 'Relaxing'],
+  },
+  {
+    label: 'What is your preferred cuisine?',
+    options: ['Japanese', 'Italian', 'Mediterranean', 'Thai', 'Indian', 'French / Bistro', 'Chinese', 'Spanish', 'Random'],
+  },
+  {
+    label: 'What is your(or person in a group) diet restriction?',
+    options: ['Halal', 'Vegetarian', 'Vegan', 'Allergies'],
   },
 ];
 
@@ -39,6 +47,7 @@ export default function PersonalQuestion() {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const maxSteps = steps.length;
   const [updatedSteps, setUpdatedSteps] = useState(steps); // New state for updated steps array
+  const [budgetRange, setBudgetRange] = useState([0, 1000]); // New state for budget range
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -55,16 +64,26 @@ export default function PersonalQuestion() {
       setSelectedOptions([...selectedOptions, option]);
     }
   };
-  
-  const handleRangeSliderChange = (event, newValue) => {
-    const updatedStepsArray = [...updatedSteps]; // Create a new copy of the steps array
-    updatedStepsArray[activeStep].range = newValue; // Update the range value of the current step in the new array
-    setUpdatedSteps(updatedStepsArray); // Update the state of the steps array
-  };
 
+  const handleRangeSliderChange = (event, newValue) => {
+    const updatedStepsArray = [...updatedSteps];
+    updatedStepsArray[activeStep].range = newValue;
+    setUpdatedSteps(updatedStepsArray);
+    if (updatedStepsArray[activeStep].slider) {
+      setBudgetRange(updatedStepsArray[activeStep].range);
+    }
+  };
+  
   useEffect(() => {
     setSelectedOptions([]);
   }, [activeStep]);
+
+  useEffect(() => {
+    if (updatedSteps[activeStep].slider) {
+      setBudgetRange(updatedSteps[activeStep].range);
+    }
+  }, [activeStep, updatedSteps]);
+  
 
   return (
     <div className={styles.containerMain2}>
@@ -89,37 +108,31 @@ export default function PersonalQuestion() {
           <Typography>{updatedSteps[activeStep].label}</Typography>
         </Paper>
         <Box sx={{ height: 255, maxWidth: 400, width: '100%', p: 2, backgroundColor: 'var(--light-ivory)' }}>
-        {steps[activeStep].slider ? (
-          <Box sx={{ width: '100%' }}>
-            <Typography id="range-slider" gutterBottom>
-              {steps[activeStep].label}
-            </Typography>
-            <RangeSlider
-              value={steps[activeStep].range}
-              onChange={(event, newValue) => {
-                steps[activeStep].range = newValue;
-              }}
-              step={steps[activeStep].step}
-              marks
-              min={0}
-              max={1000}
-              aria-labelledby="range-slider"
-            />
-          </Box>
-        ) : (
-          steps[activeStep].options.map((option, index) => (
-            <Button
-              key={index}
-              variant={selectedOptions.includes(option) ? 'contained' : 'outlined'}
-              color="primary"
-              onClick={() => handleSelectedOption(option)}
-              style={{ margin: '10px 10px 0px 0px' }}
-            >
-              {option}
-            </Button>
-          ))
-        )}
-
+        {/* <Typography>Range: ${updatedSteps[activeStep].range[0]} - ${updatedSteps[activeStep].range[1]}</Typography> */}
+        {updatedSteps[activeStep].slider ? (
+          <RangeSlider
+            value={updatedSteps[activeStep].range}
+            step={updatedSteps[activeStep].step}
+            onChange={handleRangeSliderChange}
+          />
+          ) : (
+            <div>
+              {updatedSteps[activeStep].options.map((option) => (
+                <Button
+                  key={option}
+                  variant={selectedOptions.includes(option) ? 'contained' : 'outlined'}
+                  sx={{
+                    color: 'var(--dark-gray)',
+                    borderColor: 'var(--light-gray)',
+                    margin: '5px',
+                  }}
+                  onClick={() => handleSelectedOption(option)}
+                >
+                  {option}
+                </Button>
+              ))}
+            </div>
+          )}
         </Box>
         <MobileStepper
           variant="text"
@@ -127,26 +140,14 @@ export default function PersonalQuestion() {
           position="static"
           activeStep={activeStep}
           nextButton={
-            <Button
-              size="small"
-              onClick={handleNext}
-              disabled={activeStep === maxSteps - 1 || selectedOptions.length === 0}
-            >
+            <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
               Next
-              {theme.direction === 'rtl' ? (
-                <KeyboardArrowLeft />
-              ) : (
-                <KeyboardArrowRight />
-              )}
+              {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
             </Button>
           }
           backButton={
             <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-              {theme.direction === 'rtl' ? (
-              <KeyboardArrowRight />
-              ) : (
-              <KeyboardArrowLeft />
-              )}
+              {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
               Back
             </Button>
           }
