@@ -9,40 +9,73 @@ import {
   ArrowBackIos,
 } from '@mui/icons-material';
 
+const images = [
+  {
+    id: 1,
+    src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
+    alt: "Image 1"
+  },
+  {
+    id: 2,
+    src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
+    alt: "Image 2"
+  },
+  {
+    id: 3,
+    src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
+    alt: "Image 3"
+  },
+  {
+    id: 4,
+    src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
+    alt: "Image 4"
+  },
+  {
+    id: 5,
+    src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
+    alt: "Image 5"
+  },
+  {
+    id: 6,
+    src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
+    alt: "Image 6"
+  },
+];
+
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  nextArrow: <ArrowForwardIos style={{ color: 'black'}}/>,
+  prevArrow: <ArrowBackIos style={{ color: 'black'}}/>,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+
 export default function MultiCarousel() {
-  
-  const images = [
-    {
-      id: 1,
-      src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
-      alt: "Image 1"
-    },
-    {
-      id: 2,
-      src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
-      alt: "Image 2"
-    },
-    {
-      id: 3,
-      src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
-      alt: "Image 3"
-    },
-    {
-      id: 4,
-      src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
-      alt: "Image 4"
-    },
-    {
-      id: 5,
-      src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
-      alt: "Image 5"
-    },
-    {
-      id: 6,
-      src: 'https://a.cdn-hotels.com/gdcs/production172/d459/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa.jpg?impolicy=fcrop&w=800&h=533&q=medium',
-      alt: "Image 6"
-    },
-  ];
 
   return (
     <div className="container-fluid">

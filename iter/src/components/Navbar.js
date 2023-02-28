@@ -16,7 +16,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-
+import '../../styles/fonts.css';
 
 
 const pages = ['Destination', 'Blog', 'Collaborate', 'Itinerary'];
@@ -103,6 +103,7 @@ function ResponsiveAppBar() {
                 color: 'var(--black)',
               },
               textDecoration: 'none',
+              fontFamily: 'Futura XBlk BT',
             }}
           >
             ITER

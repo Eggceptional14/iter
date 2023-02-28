@@ -122,7 +122,7 @@ export default function GeneralQuestion() {
         <Stack direction="column" spacing={2} sx={{ mt:'4em', position: 'absolute', justifyContent: 'center', alignItems: 'center', marginLeft: '30%' }}>
           <Stack direction="row" spacing={1} sx={{ mt:'4em', alignItems:'center' }}>
             <ArrowCircleDownIcon style={{ transform: 'rotate(90deg)',fontSize:'35px', color: 'var(--blue)', marginRight:'10px' }}/>
-            <h1 style={{ color:'var(--orange)', fontSize:40, fontWeight:'700', letterSpacing:1.2, color: 'var(--blue)', marginLeft: 'auto', marginRight: 'auto' }}>Plan your journey!</h1>
+            <h1 style={{ fontSize:40, fontWeight:'700', letterSpacing:1.2, color: 'var(--blue)', marginLeft: 'auto', marginRight: 'auto' }}>Plan your journey!</h1>
           </Stack>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Autocomplete
